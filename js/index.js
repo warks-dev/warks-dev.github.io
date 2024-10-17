@@ -1,8 +1,19 @@
-const targetDate = new Date(document.getElementById("countdown").dataset.date).getTime();
+const targetDate = new Date(document.getElementById("countdown").dataset.utcDateTime).getTime();
 
-setInterval(() => {
+Date.prototype.getUTCTime = function() { 
+    return new Date(
+        this.getUTCFullYear(),
+        this.getUTCMonth(),
+        this.getUTCDate(),
+        this.getUTCHours(),
+        this.getUTCMinutes(), 
+        this.getUTCSeconds()
+    ).getTime(); 
+}
 
-    const now = new Date().getTime();
+function updateCountdown() {
+
+    const now = new Date().getUTCTime();
     const timeRemaining = targetDate - now;
 
     if (timeRemaining <= 0) {
@@ -22,5 +33,7 @@ setInterval(() => {
     document.getElementById('hours').textContent = String(hours).padStart(2, '0');
     document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
     document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+}
 
-}, 1000);
+updateCountdown();
+setInterval(updateCountdown , 1000);
