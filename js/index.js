@@ -1,3 +1,8 @@
+/*
+Copyright WARKS.DEV Contributors.
+SPDX-License-Identifier: MIT
+*/
+
 const targetDate = new Date(document.getElementById("countdown").dataset.utcDateTime).getTime();
 
 Date.prototype.getUTCTime = function() { 
