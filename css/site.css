@@ -238,6 +238,14 @@ header {
   border-bottom-width: 1px;
 }
 
+hr {
+  border: 1px solid rgb(28, 32, 36);
+  display: block;
+  height: 1px;
+  margin: 0;
+  width: 100%;
+}
+
 main {
   flex-basis: 0;
   flex-grow: 1;
@@ -256,17 +264,22 @@ footer {
   border-top-width: 1px;
 }
 
-h1,
+h1 {
+  margin-bottom: 1em;
+  margin-bottom: 1em;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6,
+hr,
 ol,
 p,
 section,
 ul {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   margin-top: 1em;
 }
 
@@ -274,16 +287,21 @@ h1 {
   font-size: 35px;
 }
 
-h3 {
+h2 {
   font-size: 30px;
 }
 
-h4 {
+
+h3 {
   font-size: 25px;
 }
 
-h5 {
+h4 {
   font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
 }
 
 h6 {
