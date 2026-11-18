@@ -3,7 +3,7 @@ Copyright WARKS.DEV Contributors.
 SPDX-License-Identifier: MIT
 */
 
-@import url('site.css');
+@import url('site.css?v=2');
 
 #countdown,
 #countdown dl {
@@ -33,15 +33,24 @@ SPDX-License-Identifier: MIT
   font-size: 45px;
 }
 
+article h1 {
+  line-height: 1.15;
+}
+
+article h1 + p {
+  margin-top: 0;
+}
+
 #countdown dd,
 #countdown dt,
+article h1,
 article h2,
 article p {
   text-align: center;
 }
 
 #logo {
-  width: 256px;
+  width: clamp(160px, 45vw, 256px);
 }
 
 #rsvp {
