@@ -5,20 +5,9 @@ SPDX-License-Identifier: MIT
 
 const targetDate = new Date(document.getElementById("countdown").dataset.utcDateTime).getTime();
 
-Date.prototype.getUTCTime = function() { 
-    return new Date(
-        this.getUTCFullYear(),
-        this.getUTCMonth(),
-        this.getUTCDate(),
-        this.getUTCHours(),
-        this.getUTCMinutes(), 
-        this.getUTCSeconds()
-    ).getTime(); 
-}
-
 function updateCountdown() {
 
-    const now = new Date().getUTCTime();
+    const now = Date.now();
     const timeRemaining = targetDate - now;
 
     if (timeRemaining <= 0) {
