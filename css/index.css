@@ -3,7 +3,7 @@ Copyright WARKS.DEV Contributors.
 SPDX-License-Identifier: MIT
 */
 
-@import url('site.css');
+@import url('site.css?v=2');
 
 #countdown,
 #countdown dl {
